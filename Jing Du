@@ -1,0 +1,55 @@
+/**
+*Jing Du
+*@author Jing Du CMPSC221
+*
+*/
+public class Main 
+{
+  
+  public static void main(String[] args) 
+  {
+    SportTeamMember Damon = new SportTeamMember(3,"Damon banner", 40000);
+    
+    Damon.raiseSalary(5);
+
+    System.out.println("id= "+Damon.getId()+",name= "+Damon.getName()+",salary="+Damon.getSalary());
+ 
+  }
+}
+
+//////////////////////////////////////////////////////////
+
+
+class SportTeamMember
+{
+  private int id;
+  private String name;
+  private double salary;
+  
+  public SportTeamMember( int id,String name, double salary) 
+  {
+  
+    this.name = name;
+    this.salary=salary;
+    this.id=id;
+  }
+  public int getId()
+  {
+    return id;
+  }
+ 
+  public String getName()
+  {
+    return name;
+  }
+public double getSalary()
+{
+  return salary;
+}
+  
+  public void raiseSalary(double byPercent)
+  {
+  double raise = salary*byPercent/100;
+  salary += raise;
+}
+}
